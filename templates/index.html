@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="a simple application to google's word2vec">
+
+    <title>Comité Big Data # 19</title>
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+
+
+    <!--[if lte IE 8]>
+
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+    <!--<![endif]-->
+
+
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+
+
+
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <!-- <link rel="stylesheet" href="css/layouts/marketing.css"> -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/marketing.css') }}">
+            <!-- <link href="static/css/marketing.css" rel="stylesheet"> -->
+
+        <!--<![endif]-->
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type=text/javascript src="{{url_for('static', filename='js/script.js') }}"></script>
+
+
+
+
+
+</head>
+
+<body>
+
+<div class="header">
+<div class="home-menu ">
+        <a class="pure-menu-heading" href="">Comité Big Data #19, Word2Vec</a>
+
+    </div>
+</div>
+
+
+  <div class="content pure-g">
+
+    <div {margin-bottom: 20px;}>
+      <img style="position: relative; top: 70; left: 90; border: 0; height: 120px; width: auto;" src="https://raw.githubusercontent.com/gauthier-schweitzer/eleven-eleven/master/eleven_cdn.png" alt="Eleven x Crédit du Nord"></a>
+</div>
+
+        <div class="pure-g" >
+
+
+            <br>
+            <br>
+            <h2 class="content-head">Taper quatre mots et laisser l'IA trouver l'intrus</h2>
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+
+
+                <form name="wordsform"  id="wordsform1" class="pure-form pure-form-stacked" role="form">
+                <fieldset>
+                        <label for="Premier">Premier</label>
+                        <input name="first" id="first" type="text" placeholder="man">
+
+
+                        <label for="Deuxième">Deuxième</label>
+                        <input  name="second" id="second" type="text" placeholder="woman">
+
+
+                        <label for="Troisième">Troisième</label>
+                        <input name="third" id="third" type="text" placeholder="girl">
+
+                        <label for="Quatrième">Quatrième</label>
+                        <input id="fourth"  name="fourth" type="text" placeholder="car">
+
+
+                        <button id="mybutton1"  type="button" class="pure-button" name="submitButton" value="form2">Tester</button>
+                </fieldset>
+                </form>
+            </div>
+
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                <h4>Result</h4>
+                <p id ="result1" >
+                    car
+                </p>
+
+            </div>
+        </div>
+
+        <div class="pure-g">
+
+                    <h2 class="content-head">... est à ... ce que ... est pour ... </h2>
+                    <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+
+
+                        <form name="wordsform"  id="wordsform2" class="pure-form pure-form-stacked" role="form">
+                        <fieldset>
+
+                                <input name="first" id="first" type="text" placeholder="man">
+                                <label for="first">... est pour</label>
+
+                                <input  name="second" id="second" type="text" placeholder="king">
+                                <label for="Deuxième">... ce que</label>
+
+                                <input name="third" id="third" type="text" placeholder="woman">
+                                <label for="Troisième">... est pour</label>
+
+                                <button id="mybutton2"  type="button" class="pure-button" name="submitButton" value="form2">Tester</button>
+                        </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                        <h4>Result</h4>
+                        <p id="result2" >
+                            queen
+                        </p>
+
+                    </div>
+                </div>
+
+
+    </div>
+
+<div class="footer l-box is-center">
+        eleven, pour le Crédit du Nord
+    </div>
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type=text/javascript src="{{url_for('static', filename='js/script.js') }}"></script>
+-->
+
+</body>
+</html>
