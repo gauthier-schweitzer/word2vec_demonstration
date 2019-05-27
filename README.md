@@ -1,18 +1,19 @@
-# word2vec_simple_app
+# word2vec in a simple and fully customizable app
 
-a smiple web application using python and flask to word2vec ,
-given four words it tries to find the odd one.
+## Summary
+Thanks to this repo, you can simply deploy a local app to show how Word2Vec can be used. You can customize the design to adapt it to clients.
 
-see a life demo:
-http://pegasus99.pythonanywhere.com/
+## Dependencies
+Download [GoogleNews-vectors-negative300.bin.gz](https://github.com/mmihaltz/word2vec-GoogleNews-vectors) in the folder.
 
+To run the app, you have to first setup a conda environement using the `environment.yml` file. Then, once the environment is created, activate it (`conda activate <nameoftheenv>`) and run `python app.py` in the Prompt
 
-to read more about google word2vec please visit:
-https://code.google.com/p/word2vec/
+## Technical details
+The app is based on Python Flask. For interactivity, it uses Javascript and Ajax Callbacks, which make it slightly harder to understand at first sight.
 
-Important note : the model I used is based on kaggle's bag of words meets bags of popcorn competiton 
-https://www.kaggle.com/c/word2vec-nlp-tutorial
-so the model isn't large enough to be 100% accurate,the larger the model gets the more space it will take, so I used 
-a simple model which takes less storage.
+## Adaptation
+To adapt the design, modify `templates/index.html`
 
+## Design of the App
 
+![Alt text](App_screenshot.png?raw=true "Title")
